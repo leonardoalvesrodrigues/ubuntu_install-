@@ -8,7 +8,7 @@ autoinstall:
         realname: 'Leonardo'  # Nome real do usuário principal
         hostname: ubuntu-desktop  # Nome do computador na rede
         username: leonardo  # Nome de usuário do sistema
-        password: '1301'  # Senha do usuário (recomenda-se criptografar)
+        password: '123'  # Senha do usuário (recomenda-se criptografar)
     
     locale: pt_BR.utf8  # Define o idioma do sistema como Português do Brasil
     

@@ -1,0 +1,45 @@
+#cloud-config
+# Arquivo de configuração para instalação automatizada do Ubuntu
+
+autoinstall:
+    version: 1  # Versão do autoinstall
+    
+    identity:
+        realname: 'Leonardo'  # Nome real do usuário principal
+        hostname: ubuntu-desktop  # Nome do computador na rede
+        username: leonardo  # Nome de usuário do sistema
+        password: '1301'  # Senha do usuário (recomenda-se criptografar)
+    
+    locale: pt_BR.utf8  # Define o idioma do sistema como Português do Brasil
+    
+    keyboard:
+        layout: br  # Configuração do teclado para layout brasileiro
+    
+    timezone: "America/Sao_Paulo"  # Define o fuso horário para São Paulo, Brasil
+    
+    packages:  # Lista de pacotes a serem instalados automaticamente
+        - libreoffice  # Pacote de escritório LibreOffice
+        - gimp  # Editor de imagens GIMP
+        - git  # Sistema de controle de versões Git
+        - wget  # Ferramenta para baixar arquivos via terminal
+    
+    snaps:  # Aplicativos a serem instalados via Snap
+        - name: spotify  # Instala o Spotify
+          channel: stable  # Usa a versão estável
+          classic: false  # Não requer permissões clássicas
+        - name: code  # Instala o VS Code
+          channel: stable  # Usa a versão estável
+          classic: true  # Requer permissões clássicas para extensões
+        - name: brave  # Instala o navegador Brave
+          channel: stable  # Usa a versão estável
+          classic: true  # Requer permissões clássicas
+    
+    codecs:
+        install: true  # Habilita a instalação de codecs multimídia
+    
+    drivers:
+        install: true  # Instala drivers proprietários automaticamente
+    
+    updates: all  # Configura o sistema para instalar todas as atualizações disponíveis
+    
+    shutdown: reboot  # Após a instalação, o sistema será reiniciado automaticamente
